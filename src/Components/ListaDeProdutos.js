@@ -1,18 +1,16 @@
 
-import racao from "../racao-a.JPG"
-import racaoB from "../racao-b.JPG"
-import racaoC from "../racao-c.JPG"
-import racaoD from "../racao-d.JPG"
-import racaoE from "../racao-e.JPG"
-
-import racaoG from "../racao-g.JPG"
-import racaoH from "../racao-h.JPG"
-
-import racaoJ from "../racao-j.JPG"
-import racaoL from "../racao-l.JPG"
-import racaoM from "../racao-m.JPG"
-import racaoN from "../racao-n.JPG"
-import racaoO from "../racao-o.jpg"
+import racao from "../assets/alimento/racao-a.JPG";
+import racaoB from "../assets/alimento/racao-b.JPG";
+import racaoC from "../assets/alimento/racao-c.JPG";
+import racaoD from "../assets/alimento/racao-d.JPG";
+import racaoE from "../assets/alimento/racao-e.JPG";
+import racaoG from "../assets/alimento/racao-g.JPG";
+import racaoH from "../assets/alimento/racao-h.JPG";
+import racaoJ from "../assets/alimento/racao-j.JPG";
+import racaoL from "../assets/alimento/racao-l.JPG";
+import racaoM from "../assets/alimento/racao-m.JPG";
+import racaoN from "../assets/alimento/racao-n.JPG";
+import racaoO from "../assets/alimento/racao-o.jpg";
 
 
 
