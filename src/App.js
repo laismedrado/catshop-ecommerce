@@ -3,8 +3,11 @@ import styled from "styled-components";
 import CardProduto from "./Components/CardProduto";
 import { listaDeProdutos} from "./Components/ListaDeProdutos";
 import {listaLimpeza} from "./Components/ListaLimpeza";
+import { listaArranhadores } from "./Components/ListaArranhadores";
+import { listaBebedouros } from "./Components/ListaBededouro";
 import CarrinhoDeCompras from "./shopping-cart.svg";
 import IconeLixeira from "./iconeLixeira.svg"
+import { listaBrinquedos } from "./Components/ListaBrinquedos";
 
 
 // no App.js estão as funções que adicionam os produtos ao carrinho de compras;
@@ -151,7 +154,7 @@ const BotaoDeleteItem = styled.button`
   cursor: pointer;
 `
 
-const todosOsProdutos = [...listaDeProdutos, ...listaLimpeza];
+const todosOsProdutos = [...listaDeProdutos, ...listaLimpeza, ...listaArranhadores, ...listaBebedouros, ...listaBrinquedos];
 
 
 class App extends React.Component {
