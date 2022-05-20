@@ -1,7 +1,7 @@
 Sejam bem vindos ao Labe-commerce, esse repositório contém um esqueleto de app React e um .gitignore.
 
 
-<h1 align = "center"> 👩‍🚀Cat-ECommerce 👨‍🚀 </h1>
+<h1 align = "center"> 😻 Cat-ECommerce  😻</h1>
 <h2 align = "center"> projeto de fixação</h2>
 
 
@@ -11,7 +11,7 @@ Sejam bem vindos ao Labe-commerce, esse repositório contém um esqueleto de app
 </BR>
 
 
-**LabECommerce** é um projeto desenvolvido em equipe durante o  curso de desenvolvedor web fullstack  na  Labenu no ano de 2021, com o intuito de aplicar os conhecimentos nas linguagens de programação aprendidas até agora.
+**LabECommerce** é um projeto desenvolvido e durante o  curso de desenvolvedor web fullstack  na  Labenu no ano de 2021;
 </BR>
 </BR>
 
