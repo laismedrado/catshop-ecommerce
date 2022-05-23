@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import CardProduto from "./Components/CardProduto";
-import { listaDeProdutos} from "./Components/ListaDeProdutos";
+import { listaDeProdutos} from "./Components/ListaDeRacao";
 import {listaLimpeza} from "./Components/ListaLimpeza";
 import { listaArranhadores } from "./Components/ListaArranhadores";
 import { listaBebedouros } from "./Components/ListaBededouro";
@@ -154,7 +154,7 @@ const BotaoDeleteItem = styled.button`
   cursor: pointer;
 `
 
-const todosOsProdutos = [...listaDeProdutos, ...listaLimpeza, ...listaArranhadores, ...listaBebedouros, ...listaBrinquedos];
+const todosOsProdutos = [...listaDeRacao, ...listaLimpeza, ...listaArranhadores, ...listaBebedouros, ...listaBrinquedos];
 
 
 class App extends React.Component {
