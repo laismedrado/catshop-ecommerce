@@ -2,29 +2,7 @@ Sejam bem vindos ao Labe-commerce, esse repositório contém um esqueleto de app
 
 
 <h1 align = "center"> 😻 Cat-ECommerce  😻</h1>
-<h2 align = "center"> projeto de fixação</h2>
-
-
-<p align = "center">Sejam bem vindos ao Labe-commerce, esse repositório contém um esqueleto de app React e um .gitignore.  </p>
-
-## 🚨 Sobre 
-</BR>
-
-
-**LabECommerce** é um projeto desenvolvido e durante o  curso de desenvolvedor web fullstack  na  Labenu no ano de 2021;
-</BR>
-</BR>
-
-## 🖋 Funcionalidade e aplicação 
-</BR>
-Desenvolvimento de uma e-commerce de itens espaciais  abrangendo linhas de produtos como: 
-
-
-    
-- Roupas espaciais;
-- Camisetas com estampas divertidas relacionadas ao espaço; 
-- Brinquedos e produtos infantis temáticos; 
-   
+<
 
 
  O projeto em si possui três grandes aplicações:
