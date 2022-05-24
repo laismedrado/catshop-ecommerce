@@ -1,158 +1,17 @@
-import React from "react";
+import  React from "react";
 import styled from "styled-components";
 import CardProduto from "./Components/CardProduto";
-import { listaDeProdutos} from "./Components/ListaDeRacao";
+import { listaDeRacao} from "./Components/ListaDeRacao";
 import {listaLimpeza} from "./Components/ListaLimpeza";
 import { listaArranhadores } from "./Components/ListaArranhadores";
 import { listaBebedouros } from "./Components/ListaBededouro";
 import CarrinhoDeCompras from "./shopping-cart.svg";
 import IconeLixeira from "./iconeLixeira.svg"
 import { listaBrinquedos } from "./Components/ListaBrinquedos";
+import {BarraInformacoes , ContainerHome , ContainerProdutos , ContainerFiltros , Container , CampoOrdenacao , CampoInput , Input ,  ContainerCarrinho  ,  ContainerItemCarrinho ,  ContainerTodosProdutos  ,  ContainerValorTotal  ,  ContainerHeaderCarrinho  ,  ContainerPrecoItem  ,  ContainerDescricaoItem  ,  ContainerImgProdCarrinho  ,  ImgProdCarrinho  ,  ContainerDescItemCarrinho  ,  BotaoLimparCarrinho ,  BotaoDeleteItem } 
+from "./assets/style";
 
 
-// no App.js estão as funções que adicionam os produtos ao carrinho de compras;
-
-
-//============================ Estilização ============================
-
-const BarraInformacoes = styled.div`
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  align-items: center;  
-  font-size: 1.25em;
-`;
-const ContainerHome = styled.div`
-  /* height:100vh; */
-  width: 80%;
-  margin: center;
-  align-items: center;
-`;
-const ContainerProdutos = styled.div`
-  flex-grow: 1;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(4, 1fr);
-  row-gap: 10px;
-  column-gap: 10px;
-  margin: 10px;
-`;
-const ContainerFiltros = styled.div` 
-display: flex;
-flex-direction: column;
-padding: 1rem;
-width: 250px;
-`
-const Container = styled.div` 
-width: 100%;
-display: grid;
-grid-template-columns: 1fr 10fr 1fr;
-
-`
-const CampoOrdenacao = styled.div` 
-display: flex;
-justify-content: space-between;
-width: 40%;
-`
-const CampoInput = styled.div` 
-display: flex;
-flex-direction: column;
-height: 90px;
-justify-content: space-around;
-margin: 30px;
-font-size: 1.25em;
-
-`
-const Input = styled.input` 
-padding: 10px;
-border-radius: 5px;
-border: red;
-margin-top: 10px;
-background-color: #D0D3D9;
-color: black;
-`
-const ContainerCarrinho = styled.div` 
-display: flex;
-justify-self: flex-end;
-flex-direction: column;
-width: 250px;
-height: 100vh;
-box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-position:fixed;
-`
-const ContainerItemCarrinho = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 1rem;
-  height: 80px;
-`
-//_______________________________
-
-const ContainerTodosProdutos = styled.div`
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-  /* align-items: center; */
-  overflow-y: auto;
-`
-//__________________________________________________
-const ContainerValorTotal = styled.div`
-  display: flex;
-  justify-content: space-between;
-  border: none;
-  background-color: #2cbc63;
-  padding: 0 1rem;
-  font-weight: bold;
-`
-const ContainerHeaderCarrinho = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 1rem;
-  border: none;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-`
-const ContainerPrecoItem = styled.p`
-  font-weight: bold;
-  text-align: justify;
-  padding-right: 0.5rem;
-  width:30%;
-`
-const ContainerDescricaoItem = styled.p`
-  display:flex;
-  width: 55%;
-  text-align: left;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-`
-const ContainerImgProdCarrinho = styled.div`
-  width:15%;
-`
-const ImgProdCarrinho = styled.img`
-  height: 40px;
-`
-const ContainerDescItemCarrinho = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-grow: 1;
-`
-const BotaoLimparCarrinho = styled.button`
-  background-color: white;
-  border: none;
-  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
-  height: 50px;
-  width: 100%;
-  font-weight: bold;
-  cursor: pointer;
-  font-size: 16px;
-`
-const BotaoDeleteItem = styled.button`
-  background: none;
-  border: none;
-  cursor: pointer;
-`
 
 const todosOsProdutos = [...listaDeRacao, ...listaLimpeza, ...listaArranhadores, ...listaBebedouros, ...listaBrinquedos];
 
@@ -276,6 +135,7 @@ class App extends React.Component {
       })
       .map((produto) => {
         return (
+         
           <CardProduto
             key={produto.id}
             imageUrl={produto.imageUrl}
@@ -308,7 +168,10 @@ class App extends React.Component {
     const valorTotal = this.state.carrinho.reduce((acumulador, item) =>acumulador + item.valor * item.quantidade, 0)
 
     return (
+   
         <Container>
+          
+          
           <ContainerFiltros>
             <h1>Busca</h1>
 
@@ -343,7 +206,8 @@ class App extends React.Component {
                 value={this.state.classificacaoCategoria}
                 onChange={this.upDateCategoria}>
                 <option value="Todas as categorias">Todas as categorias </option>
-                <option value="Roupas espaciais"> Roupas espaciais </option>
+                <option value=" 
+                "> Roupas espaciais </option>
                 <option value="Camisetas com estampas divertidas do espaço">Camisetas com estampas divertidas do espaço </option>
                 <option value="Brinquedos com tema espacial">Brinquedos com tema espacial</option>
 
@@ -404,6 +268,7 @@ class App extends React.Component {
           </ContainerCarrinho>
 
         </Container>
+      
     );
   }
 }
