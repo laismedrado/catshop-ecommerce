@@ -18,7 +18,7 @@ import racaoO from "../assets/alimento/racao-o.jpg";
 
  // página responsável por listar os produtos da loja virtual;
  
-export const listaDeProdutos = [
+export const listaDeRacao = [
     //RAÇÃO
     {
       id: 1,
