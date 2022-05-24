@@ -16,7 +16,7 @@ flex-direction: column;
 justify-content: center;
 background-color: #D0D3D9;
 text-align: center;
-border: 1px solid gray;
+border: none;
 border-radius: 5px;
 -webkit-box-shadow: 3px 3px 0px 0px rgba(50, 50, 50, 0.75);
 -moz-box-shadow:    3px 3px 0px 0px rgba(50, 50, 50, 0.75);

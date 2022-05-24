@@ -10,6 +10,11 @@ import IconeLixeira from "./iconeLixeira.svg"
 import { listaBrinquedos } from "./Components/ListaBrinquedos";
 import {BarraInformacoes , ContainerHome , ContainerProdutos , ContainerFiltros , Container , CampoOrdenacao , CampoInput , Input ,  ContainerCarrinho  ,  ContainerItemCarrinho ,  ContainerTodosProdutos  ,  ContainerValorTotal  ,  ContainerHeaderCarrinho  ,  ContainerPrecoItem  ,  ContainerDescricaoItem  ,  ContainerImgProdCarrinho  ,  ImgProdCarrinho  ,  ContainerDescItemCarrinho  ,  BotaoLimparCarrinho ,  BotaoDeleteItem } 
 from "./assets/style";
+import { theme } from "./assets/theme";
+import { ThemeProvider } from "styled-components";
+import Header from "./Components/Header";
+
+
 
 
 
@@ -150,17 +155,21 @@ class App extends React.Component {
 
     const componenteCarrinho = this.state.carrinho.map((produto) => {
       return (
+     
         <ContainerItemCarrinho key={produto.name}>
           <ContainerImgProdCarrinho>
-            <ImgProdCarrinho src={produto.imageUrl}/>
+          <ImgProdCarrinho src={produto.imageUrl}/>
           </ContainerImgProdCarrinho>
           <ContainerDescItemCarrinho>
+          
             <p>{produto.quantidade}x</p>
             <ContainerDescricaoItem>{produto.name}</ContainerDescricaoItem>          
             <ContainerPrecoItem>R$ {produto.valor.toFixed(2)}</ContainerPrecoItem>          
             <BotaoDeleteItem onClick={() => this.removeItem(produto.name)}><img src={IconeLixeira} alt={"Icone lixeira, remover item do carrinho"}/></BotaoDeleteItem>        
           </ContainerDescItemCarrinho>
         </ContainerItemCarrinho>
+        
+        
       )
     })
     
@@ -168,9 +177,10 @@ class App extends React.Component {
     const valorTotal = this.state.carrinho.reduce((acumulador, item) =>acumulador + item.valor * item.quantidade, 0)
 
     return (
-   
+   <ThemeProvider theme={theme}>
+     <Header/>
         <Container>
-          
+        
           
           <ContainerFiltros>
             <h1>Busca</h1>
@@ -223,6 +233,7 @@ class App extends React.Component {
               <p>Quantidade de produtos: {componentesProdutos.length}</p>
 
               <CampoOrdenacao>
+                
                 <label>Ordenar por</label>
 
                 <select
@@ -268,7 +279,7 @@ class App extends React.Component {
           </ContainerCarrinho>
 
         </Container>
-      
+        </ThemeProvider>
     );
   }
 }

@@ -1,26 +1,17 @@
-import {  createMuiTheme } from '@material-ui/core/styles';
-import { shadows } from '@material-ui/system';
+import { createTheme } from '@material-ui/core';
+import {primaryColor, secondaryColor} from '../assets/colors';
 
 
 
-export const theme = createMuiTheme({
+export const theme = createTheme({
     palette: {
             primary: {
-                main: "#c56264",
+                main: primaryColor
+             
             },
             secondary: {
-                main: "#c56264",
+                main: secondaryColor
             },
 
-    shadows: {
-           boxShadow: 2,
-           width: '50rem',
-           height: '50rem',
-           bgcolor: (theme) => (theme.palette.mode === 'dark' ? '#101010' : '#fff'),
-           color: (theme) =>
-            theme.palette.mode === 'dark' ? 'grey.300' : 'grey.800',
-           p: 1,
-           m: 1,
-     
-        }}
+    },
 });
